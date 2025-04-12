@@ -4,7 +4,6 @@
 * **Goal:** To analyze sales patterns for the fictional Contoso retail company using a subset of their data, identifying key trends and drivers
 * **Dataset:** Contoso sample dataset (subset) simulating retail business data, including sales transactions, product details, customer information, and store data.
 * **Tools:** Python data science ecosystem, PostgreSQL, Jupyter Notebook, Git.
-* **Date:** April 2025 (Update with current date/year)
 
 ## 2. Business Questions
 * Analyze overall sales performance and temporal trends (monthly KPIs, seasonality).
@@ -17,7 +16,6 @@
 * **Tables Used:** `sales`, `product`, `customer`, `store`
 
 ## 4. Data Cleaning & Preparation
-*(Detail the steps taken to create `analysis_df_processed`)*
 1.  **Connection:** Established connection to PostgreSQL using SQLAlchemy.
 2.  **Loading:** Loaded `sales`, `product`, `customer`, `store` tables into pandas DataFrames.
 3.  **Indexing:** Set primary key columns (`productkey`, `customerkey`, `storekey`) as the index for respective dimension tables (`product_df`, `customer_df`, `store_df`) to optimize merges. Verified key uniqueness.
@@ -32,21 +30,39 @@
 9.  **DateTimeIndex:** Set the `orderdate` column as the `DateTimeIndex` for `df` and sorted the index for time series analysis.
 10. **Result:** The final `df` DataFrame has shape (199873, 64 columns) and is ready for analysis.
 
-## 6. Exploratory Data Analysis (EDA)
-*(Upcoming)*
+## 5. Analysis & Findings
+### Theme 1: Temporal Sales Analysis
+* **Monthly KPIs:** Analyzed trends for Total Revenue (USD), Total Units Sold, and Average Revenue per Order (USD) on a monthly basis.
+    * Identified distinct phases in Total Revenue (USD): consistent growth (2015-2019), a plateau period in 2020, followed by a rebound and renewed growth from 2021 onwards.
+    * Despite overall revenue growth, the Average Revenue per Order (USD) displayed a gradual downward trend across the decade, indicating that increases in total revenue were primarily driven by higher order volumes rather than increased spending per individual order.
+    * Key Visualization: Line plots showing monthly trends for the three KPIs.
 
-## 7. Analysis & Findings
-*(Upcoming - Will address the business questions outlined above)*
-* Theme 1: Temporal Sales Analysis
-* Theme 2: Product Performance
-* Theme 3: Customer Insights
-* Theme 4: Store & Regional Performance
+![](charts/q1_1.png)
 
-## 8. Visualizations
-*(Upcoming - Key visualizations will be generated during the analysis)*
+* **Seasonality:** Investigated monthly seasonality patterns in Total Revenue (USD).
+    * Pronounced seasonality was confirmed: sales volumes consistently build during the second half of the year, reaching a clear peak in December. The period between March and May typically represents the annual sales trough.
+    * Analysis of monthly revenue distributions suggested greater year-over-year variability in sales performance during the first half of the calendar year compared to the more consistent second half.
+    * Key Visualizations: Bar chart showing median revenue per month, Box plot showing distribution of revenue per month.
 
-## 9. Conclusion & Summary
-*(Upcoming)*
+![](charts/q1_2.png)
 
-## 10. Future Work & Limitations
-*(Upcoming)*
+![](charts/q1_3.png)
+
+### Theme 2: Product Performance
+* **Category & Subcategory Analysis:** Examined Total Revenue (USD), Total Profit (USD), and Profit Margin (%) across product categories and subcategories.
+    * The 'Computers' category emerged as the dominant revenue driver. Within this category and others, key subcategories generally exhibited healthy profit margins, typically ranging from 50% to 60%.
+    * 'Desktops' and 'Projectors' were identified as the primary subcategory profit centers during the analysis period.
+    * Key Visualizations: Horizontal bar charts showing Top 15 Subcategories by Revenue and Profit (colored by Category), Bar charts comparing overall Category performance (Revenue, Profit).
+
+![](charts/q2_1_a.png)
+
+![](charts/q2_1_b.png)
+
+* **Top Products (Yearly Contribution):** Analyzed the contribution of the Top 10 most profitable products within each year.
+    * The analysis indicated that the Top 10 products consistently accounted for 7% to 13% of the total annual profit.
+    * A modest downward trend was observed in this contribution percentage over the years, suggesting a slight decrease in profit concentration among the highest-performing products over time.
+    * Key Visualization: Dual-axis line plot showing the absolute profit of the Top 10 products per year alongside their percentage contribution to that year's total profit.
+
+![](charts/q2_2.png)
+
+![](charts/q2_3.png)
