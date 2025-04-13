@@ -66,3 +66,36 @@
 ![](charts/q2_2.png)
 
 ![](charts/q2_3.png)
+
+### Theme 3: Customer Insights
+* **Demographics & Spending** Analyzed the distribution of unique customers and their associated spending patterns across key demographics.
+    * Demographic analysis revealed a near-even gender distribution. Notably, the 65+ age group constitutes the largest customer cohort and demonstrates significantly higher average spending, with their average revenue per customer approximately double that observed across other age groups. Geographically, while the United States has the highest volume of customers, those in the United Kingdom and Germany exhibit greater average spending per customer.
+
+![](charts/q3_1_a.png)
+
+![](charts/q3_1_b.png)
+
+![](charts/q3_1_c.png)
+
+![](charts/q3_1_d.png)
+
+* **RFM Segmentation** Performed Recency, Frequency, Monetary (RFM) analysis to segment customers based on their purchasing behavior (using USD).
+    * Calculated Recency (days since last purchase), Frequency (number of unique orders), and Monetary (total USD revenue) for each customer.
+    * Developed RFM scores (1-5 scale) using quantiles (with rank-based scoring for Frequency due to data skew).
+    * Defined customer segments based on RFM score patterns using regex mapping.
+
+    | Segment                      |   Count |   Percentage |
+    |:-----------------------------|--------:|-------------:|
+    | Hibernating/Lost             |   10659 |         21.5 |
+    | Potential Loyalists          |    8787 |         17.8 |
+    | Loyal Customers              |    8102 |         16.4 |
+    | At Risk                      |    5779 |         11.7 |
+    | Champions                    |    3740 |          7.6 |
+    | Infrequent - Mid Recency     |    3566 |          7.2 |
+    | Slipping - Low Value         |    2552 |          5.2 |
+    | Active Loyalists - Med Value |    2463 |          5   |
+    | Other - Unclassified         |    2420 |          4.9 |
+    | Need Attention - Low Value   |     957 |          1.9 |
+    | Need Attention               |     462 |          0.9 |
+
+![](charts/q3_2.png)
