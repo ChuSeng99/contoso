@@ -35,14 +35,12 @@
 * **Monthly KPIs:** Analyzed trends for Total Revenue (USD), Total Units Sold, and Average Revenue per Order (USD) on a monthly basis.
     * Identified distinct phases in Total Revenue (USD): consistent growth (2015-2019), a plateau period in 2020, followed by a rebound and renewed growth from 2021 onwards.
     * Despite overall revenue growth, the Average Revenue per Order (USD) displayed a gradual downward trend across the decade, indicating that increases in total revenue were primarily driven by higher order volumes rather than increased spending per individual order.
-    * Key Visualization: Line plots showing monthly trends for the three KPIs.
 
 ![](charts/q1_1.png)
 
 * **Seasonality:** Investigated monthly seasonality patterns in Total Revenue (USD).
     * Pronounced seasonality was confirmed: sales volumes consistently build during the second half of the year, reaching a clear peak in December. The period between March and May typically represents the annual sales trough.
     * Analysis of monthly revenue distributions suggested greater year-over-year variability in sales performance during the first half of the calendar year compared to the more consistent second half.
-    * Key Visualizations: Bar chart showing median revenue per month, Box plot showing distribution of revenue per month.
 
 ![](charts/q1_2.png)
 
@@ -52,7 +50,6 @@
 * **Category & Subcategory Analysis:** Examined Total Revenue (USD), Total Profit (USD), and Profit Margin (%) across product categories and subcategories.
     * The 'Computers' category emerged as the dominant revenue driver. Within this category and others, key subcategories generally exhibited healthy profit margins, typically ranging from 50% to 60%.
     * 'Desktops' and 'Projectors' were identified as the primary subcategory profit centers during the analysis period.
-    * Key Visualizations: Horizontal bar charts showing Top 15 Subcategories by Revenue and Profit (colored by Category), Bar charts comparing overall Category performance (Revenue, Profit).
 
 ![](charts/q2_1_a.png)
 
@@ -99,3 +96,14 @@
     | Need Attention               |     462 |          0.9 |
 
 ![](charts/q3_2.png)
+
+### Theme 4: Store & Regional Performance
+* Evaluate and compare the financial performance of different physical store locations or geographic regions.
+
+![](charts/q4_1.png)
+
+![](charts/q4_2.png)
+
+![](charts/q4_3.png)
+
+![](charts/q4_4.png)
